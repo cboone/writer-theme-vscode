@@ -1,4 +1,4 @@
-# Writer Color Scheme for Sublime Text
+# Writer Color Theme for VS Code
 
 A color scheme for focused long-form writing, mimicking fantastic [iA Writer](https://ia.net/writer).
 
@@ -9,51 +9,57 @@ A color scheme for focused long-form writing, mimicking fantastic [iA Writer](ht
 
 ## Screenshots
 
-<img src="screenshot.png" width="780px">
-<img src="screenshot_light.png" width="780px">
-<img src="screenshot_dark.png" width="780px">
-
-## Recommended settings
-
-Preferences:
-
-```
-{
-  "caret_extra_width": 2,
-  "draw_centered": true,
-  "draw_indent_guides": false,
-  "draw_white_space": ["selection_none"],
-  "font_face": "Writer",
-  "font_size": 16,
-  "gutter": false,
-  "highlight_line": false,
-  "line_padding_bottom": 4,
-  "line_padding_top": 4,
-  "margin": 10,
-  "scroll_context_lines": 2,
-  "scroll_past_end": 0.5,
-  "word_wrap": true,
-  "wrap_width": 72,
-}
-```
+<img src="screenshot.png" width="780px" alt="Writer theme screenshot">
+<img src="screenshot_light.png" width="780px" alt="Writer light theme screenshot">
+<img src="screenshot_dark.png" width="780px" alt="Writer dark theme screenshot">
 
 ## Installation
 
-First, install Writer via Package Control:
+Install from the VS Code Marketplace:
 
-1. `Tools` → `Command Palette...` → `Package Control: Install Package`
-2. Select `Writer Color Scheme` and press Enter.
+1. Open Extensions (`Cmd+Shift+X`)
+2. Search for "Writer Color Theme"
+3. Click Install
 
-Then, enable it:
+Or install via Quick Open (`Cmd+P`):
 
-3. Select `Preferences → Color Scheme ...`
-4. Pick `Auto`, then `Writer` for light variant and `Writer Dark` for dark variant.
+```text
+ext install tonsky.writer-theme
+```
+
+Then enable the theme:
+
+1. Open Command Palette (`Cmd+K Cmd+T`)
+2. Select "Writer" for light variant or "Writer Dark" for dark variant
+
+## Recommended settings
+
+Add these to your `settings.json` for the best writing experience:
+
+```json
+{
+  "editor.cursorWidth": 2,
+  "editor.fontFamily": "Writer",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.6,
+  "editor.lineNumbers": "off",
+  "editor.minimap.enabled": false,
+  "editor.renderIndentGuides": false,
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "selection",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 72,
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false,
+  "zenMode.centerLayout": true,
+  "zenMode.fullScreen": false,
+  "zenMode.hideLineNumbers": true
+}
+```
 
 ## See also
 
 [Alabaster Color Scheme](https://github.com/tonsky/sublime-scheme-alabaster): minimal color scheme for coding.
-
-[Profile Switcher](https://github.com/tonsky/sublime-profiles): Switch quickly between writing and coding profiles.
 
 [Fira Code](https://github.com/tonsky/FiraCode/): Best coding font in the world.
 
@@ -63,4 +69,12 @@ Made by [Niki Tonsky](https://twitter.com/nikitonsky).
 
 ## License
 
-[MIT License](./LICENSE.txt)
+[MIT License](./LICENSE)
+
+## To do
+
+- Review colors
+- Create icon
+- Finalize README
+- Publish to VSCode
+- Publish to VSCodium

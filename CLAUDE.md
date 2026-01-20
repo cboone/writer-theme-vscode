@@ -36,7 +36,21 @@ The original Sublime Text themes are preserved for reference:
 
 VSCode theme files have two main sections:
 
-- `colors` - Workbench colors (editor, sidebar, tabs, statusbar)
+- `colors` - Workbench colors (editor, sidebar, tabs, statusbar, terminal)
 - `tokenColors` - Syntax highlighting rules with TextMate scopes
 
-The conversion plan with detailed color mappings is in `docs/plans/sublime-to-vscode-theme-conversion.md`.
+### Color Palette
+
+Light theme base colors:
+
+- Background: `#F7F7F7`
+- Foreground: `#1a1a1a`
+- Accent: `#58bae7`
+- Selection: `#cee7f3`
+
+Dark theme base colors:
+
+- Background: `#1b1b1b`
+- Foreground: `#cbcccc`
+- Accent: `#55bbe7`
+- Selection: `#29434e`
