@@ -8,10 +8,12 @@ Comparison of theme files against the [VSCode Theme Color Reference](https://cod
 
 | Category | Status |
 |----------|--------|
-| Colors Defined | 117 per theme |
+| Workbench Colors Defined | 117 per theme |
 | Invalid Keys | 0 |
 | High-Impact Missing | ~25 |
 | Medium-Impact Missing | ~30 |
+| Token Colors Defined | 13 rules (Markdown-focused) |
+| Semantic Highlighting | Disabled |
 
 ---
 
@@ -27,6 +29,87 @@ The themes define colors for these areas:
 - Sidebar, Status Bar, Tabs
 - Terminal (all 16 ANSI colors)
 - Title Bar, Tree, Text Links
+
+---
+
+## Token Colors and Semantic Highlighting
+
+Comparison against the [Semantic Highlight Guide](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide).
+
+### Current State
+
+The themes have **no semantic token support** (`semanticHighlighting` and `semanticTokenColors` are absent). This appears intentional given the theme's purpose as "a minimal, monochromatic color scheme optimized for focused Markdown writing."
+
+### Token Colors Defined (13 rules)
+
+**Markdown formatting:**
+
+| Scope | Style |
+|-------|-------|
+| `markup.heading` | Bold |
+| `markup.italic` | Italic |
+| `markup.bold` | Bold |
+| `markup.bold markup.italic` | Bold italic |
+| `markup.inline.raw`, `markup.fenced_code.block`, `markup.raw.block` | Background tint |
+| `markup.underline.link` | Underline, accent color |
+| `markup.inserted` | Green |
+| `markup.deleted` | Red |
+| `markup.changed` | Orange |
+| `markup.ignored`, `markup.untracked` | Gray |
+
+**General:**
+
+| Scope | Style |
+|-------|-------|
+| `comment`, punctuation definitions | Muted foreground |
+| `meta.image.inline.description`, `meta.link.inline.description` | Normal foreground |
+| `invalid` | Error background and foreground |
+
+### Missing Semantic Token Fallback Scopes
+
+Per the [Semantic Token Scope Map](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide#semantic-token-scope-map), these TextMate scopes serve as fallbacks for semantic tokens. None are currently defined:
+
+| Semantic Token | Fallback TextMate Scope |
+|----------------|-------------------------|
+| `namespace` | `entity.name.namespace` |
+| `type` | `entity.name.type` |
+| `type.defaultLibrary` | `support.type` |
+| `struct` | `storage.type.struct` |
+| `class` | `entity.name.type.class` |
+| `class.defaultLibrary` | `support.class` |
+| `interface` | `entity.name.type.interface` |
+| `enum` | `entity.name.type.enum` |
+| `function` | `entity.name.function` |
+| `function.defaultLibrary` | `support.function` |
+| `method` | `entity.name.function.member` |
+| `macro` | `entity.name.function.preprocessor` |
+| `variable` | `variable.other.readwrite` |
+| `variable.readonly` | `variable.other.constant` |
+| `variable.readonly.defaultLibrary` | `support.constant` |
+| `parameter` | `variable.parameter` |
+| `property` | `variable.other.property` |
+| `property.readonly` | `variable.other.constant.property` |
+| `enumMember` | `variable.other.enummember` |
+| `event` | `variable.other.event` |
+
+### Other Common Scopes Not Defined
+
+These standard TextMate scopes have no rules:
+
+- `keyword`, `keyword.control`, `keyword.operator`
+- `string`, `string.quoted`
+- `constant.numeric`, `constant.language`
+- `storage`, `storage.type`, `storage.modifier`
+- `entity.name.tag` (HTML/XML tags)
+- `entity.other.attribute-name`
+
+### Design Decision
+
+The absence of code syntax highlighting is consistent with the theme's minimalist, writing-focused design. Options for future consideration:
+
+1. **Keep as-is** - Maintain the monochromatic philosophy
+2. **Subtle muting** - Apply the muted color to all code tokens
+3. **Full semantic support** - Add `semanticHighlighting: true` and define colors
 
 ---
 
@@ -274,4 +357,5 @@ These are specialized features with good defaults.
 ## References
 
 - [VSCode Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
+- [Semantic Highlight Guide](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide)
 - [Color Theme Documentation](https://code.visualstudio.com/api/extension-guides/color-theme)
