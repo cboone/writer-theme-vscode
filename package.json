@@ -1,0 +1,50 @@
+{
+  "author": "Nikita Prokopov (converted to VSCode by Christopher Boone)",
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "id": "writer-light",
+        "label": "Writer Light",
+        "path": "./themes/writer-light-color-theme.json",
+        "uiTheme": "vs"
+      },
+      {
+        "id": "writer-dark",
+        "label": "Writer Dark",
+        "path": "./themes/writer-dark-color-theme.json",
+        "uiTheme": "vs-dark"
+      }
+    ]
+  },
+  "description": "A minimal, monochromatic color scheme for focused long-form writing, inspired by iA Writer. Optimized for Markdown.",
+  "displayName": "Writer Color Theme",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "homepage": "https://github.com/cboone/writer-theme-vscode",
+  "icon": "icon.png",
+  "keywords": [
+    "color-theme",
+    "dark",
+    "ia-writer",
+    "light",
+    "markdown",
+    "minimal",
+    "monochrome",
+    "theme",
+    "writer",
+    "writing"
+  ],
+  "license": "MIT",
+  "name": "writer-theme-vscode",
+  "packageManager": "yarn@4.12.0",
+  "publisher": "cboone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cboone/writer-theme-vscode.git"
+  },
+  "version": "1.0.0"
+}
