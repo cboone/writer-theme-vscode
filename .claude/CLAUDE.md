@@ -25,13 +25,6 @@ Press `F5` in VSCode to launch Extension Development Host, then:
 - `package.json` - Extension manifest
 - `specimen.md` - Markdown test file for theme verification
 
-### Source Files (Sublime Format)
-
-The original Sublime Text themes are preserved for reference:
-
-- `Writer.sublime-color-scheme` - Light theme source
-- `Writer Dark.sublime-color-scheme` - Dark theme source
-
 ## Architecture
 
 VSCode theme files have two main sections:
