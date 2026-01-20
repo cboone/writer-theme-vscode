@@ -8,27 +8,52 @@ Comparison of theme files against the [VSCode Theme Color Reference](https://cod
 
 | Category | Status |
 |----------|--------|
-| Workbench Colors Defined | 117 per theme |
+| Workbench Colors Defined | 207 per theme |
 | Invalid Keys | 0 |
-| High-Impact Missing | ~25 |
-| Medium-Impact Missing | ~30 |
 | Token Colors Defined | 11 rules (Markdown-focused) |
-| Semantic Highlighting | Disabled |
+| Semantic Highlighting | Disabled (intentional) |
 
 ---
 
 ## Current Coverage
 
-The themes define colors for these areas:
+The themes define comprehensive colors for all major UI areas:
 
-- Activity Bar, Badge, Breadcrumb
-- Button, Dropdown, Input
-- Editor (selection, find, line highlight, cursor, errors/warnings)
-- Editor Gutter, Bracket Match, Indent Guides, Line Numbers
-- List, Scrollbar, Panel, Peek View
-- Sidebar, Status Bar, Tabs
-- Terminal (all 16 ANSI colors)
-- Title Bar, Tree, Text Links
+**Core UI:**
+- Activity Bar (including active/inactive states)
+- Badge, Breadcrumb, Button (primary and secondary)
+- Command Center, Debug Toolbar
+- Dropdown, Input (with validation states)
+
+**Editor:**
+- Selection, find, line highlight, cursor
+- Bracket matching and colorization (muted)
+- Gutter (added/modified/deleted indicators)
+- Hover widget, suggest widget, sticky scroll
+- Inlay hints, overview ruler, minimap
+
+**Lists and Trees:**
+- Selection, hover, focus states
+- Error/warning foregrounds
+- Filter match highlights
+- Indent guides
+
+**Panels and Widgets:**
+- Notifications (with error/warning/info icons)
+- Quick picker / command palette
+- Peek view (with match highlights)
+- Panel sections and headers
+
+**Version Control:**
+- Git decorations (added, modified, deleted, ignored, etc.)
+- Diff editor (inserted/removed backgrounds)
+- Merge conflict highlighting
+
+**Other:**
+- Terminal (all 16 ANSI colors, cursor, selection)
+- Testing icons (passed, failed, errored, skipped)
+- Settings editor, welcome page
+- Menus, toolbars, scrollbars
 
 ---
 
@@ -120,244 +145,43 @@ The absence of code syntax highlighting is consistent with the theme's minimalis
 
 ---
 
-## High-Impact Missing Colors
+## Color Palette
 
-These affect commonly-used features and should be prioritized.
+### Light Theme
 
-### Git Decorations
+| Role | Color | Hex |
+|------|-------|-----|
+| Background | ![#F7F7F7](https://via.placeholder.com/12/F7F7F7/F7F7F7) | `#F7F7F7` |
+| Secondary BG | ![#eeeeee](https://via.placeholder.com/12/eeeeee/eeeeee) | `#eeeeee` |
+| Tertiary BG | ![#f0f0f0](https://via.placeholder.com/12/f0f0f0/f0f0f0) | `#f0f0f0` |
+| Foreground | ![#1a1a1a](https://via.placeholder.com/12/1a1a1a/1a1a1a) | `#1a1a1a` |
+| Muted | ![#c6c5c2](https://via.placeholder.com/12/c6c5c2/c6c5c2) | `#c6c5c2` |
+| Border | ![#e0e0e0](https://via.placeholder.com/12/e0e0e0/e0e0e0) | `#e0e0e0` |
+| Accent | ![#58bae7](https://via.placeholder.com/12/58bae7/58bae7) | `#58bae7` |
+| Selection | ![#cee7f3](https://via.placeholder.com/12/cee7f3/cee7f3) | `#cee7f3` |
+| Find Match | ![#FFBC5D](https://via.placeholder.com/12/FFBC5D/FFBC5D) | `#FFBC5D` |
+| Added | ![#6abf40](https://via.placeholder.com/12/6abf40/6abf40) | `#6abf40` |
+| Modified | ![#ec9112](https://via.placeholder.com/12/ec9112/ec9112) | `#ec9112` |
+| Deleted | ![#d32d2a](https://via.placeholder.com/12/d32d2a/d32d2a) | `#d32d2a` |
+| Error | ![#ef786c](https://via.placeholder.com/12/ef786c/ef786c) | `#ef786c` |
 
-File tree coloring for version control status.
+### Dark Theme
 
-| Key | Purpose |
-|-----|---------|
-| `gitDecoration.addedResourceForeground` | New files |
-| `gitDecoration.modifiedResourceForeground` | Changed files |
-| `gitDecoration.deletedResourceForeground` | Deleted files |
-| `gitDecoration.untrackedResourceForeground` | Untracked files |
-| `gitDecoration.ignoredResourceForeground` | Ignored files |
-| `gitDecoration.conflictingResourceForeground` | Merge conflicts |
-| `gitDecoration.renamedResourceForeground` | Renamed files |
-| `gitDecoration.stageModifiedResourceForeground` | Staged modifications |
-| `gitDecoration.stageDeletedResourceForeground` | Staged deletions |
-| `gitDecoration.submoduleResourceForeground` | Submodules |
-
-### Diff Editor
-
-Side-by-side and inline diff views.
-
-| Key | Purpose |
-|-----|---------|
-| `diffEditor.insertedTextBackground` | Added text highlight |
-| `diffEditor.insertedLineBackground` | Added line background |
-| `diffEditor.removedTextBackground` | Removed text highlight |
-| `diffEditor.removedLineBackground` | Removed line background |
-| `diffEditor.border` | Diff editor border |
-| `diffEditor.diagonalFill` | Diagonal fill pattern |
-| `diffEditorGutter.insertedLineBackground` | Gutter for additions |
-| `diffEditorGutter.removedLineBackground` | Gutter for deletions |
-
-### Notifications
-
-Toast notifications and notification center.
-
-| Key | Purpose |
-|-----|---------|
-| `notifications.background` | Notification background |
-| `notifications.foreground` | Notification text |
-| `notifications.border` | Notification border |
-| `notificationLink.foreground` | Links in notifications |
-| `notificationCenterHeader.background` | Header background |
-| `notificationCenterHeader.foreground` | Header text |
-| `notificationsErrorIcon.foreground` | Error icon |
-| `notificationsWarningIcon.foreground` | Warning icon |
-| `notificationsInfoIcon.foreground` | Info icon |
-
-### Quick Picker / Command Palette
-
-Command palette and quick open dialogs.
-
-| Key | Purpose |
-|-----|---------|
-| `quickInput.background` | Picker background |
-| `quickInput.foreground` | Picker text |
-| `quickInputList.focusBackground` | Focused item background |
-| `quickInputList.focusForeground` | Focused item text |
-| `quickInputTitle.background` | Title background |
-| `pickerGroup.border` | Group separator |
-| `pickerGroup.foreground` | Group label |
-
-### Editor Suggest Widget
-
-Autocomplete and IntelliSense dropdown.
-
-| Key | Purpose |
-|-----|---------|
-| `editorSuggestWidget.background` | Widget background |
-| `editorSuggestWidget.foreground` | Widget text |
-| `editorSuggestWidget.border` | Widget border |
-| `editorSuggestWidget.highlightForeground` | Matched text |
-| `editorSuggestWidget.selectedBackground` | Selected item |
-| `editorSuggestWidget.selectedForeground` | Selected item text |
-| `editorSuggestWidget.focusHighlightForeground` | Focused match |
-
-### Editor Hover Widget
-
-Hover information popups.
-
-| Key | Purpose |
-|-----|---------|
-| `editorHoverWidget.background` | Hover background |
-| `editorHoverWidget.foreground` | Hover text |
-| `editorHoverWidget.border` | Hover border |
-| `editorHoverWidget.statusBarBackground` | Status bar in hover |
-
----
-
-## Medium-Impact Missing Colors
-
-These enhance the experience but have reasonable defaults.
-
-### Base Colors
-
-| Key | Purpose |
-|-----|---------|
-| `foreground` | Global default text |
-| `descriptionForeground` | Secondary/muted text |
-| `errorForeground` | Error text color |
-| `disabledForeground` | Disabled elements |
-| `widget.shadow` | Shadow for floating widgets |
-| `selection.background` | Global selection |
-
-### Terminal Extras
-
-| Key | Purpose |
-|-----|---------|
-| `terminal.selectionBackground` | Selected text in terminal |
-| `terminal.selectionForeground` | Selected text foreground |
-| `terminalCursor.foreground` | Cursor color |
-| `terminalCursor.background` | Cursor background |
-| `terminal.findMatchBackground` | Find match highlight |
-| `terminal.findMatchHighlightBackground` | Other matches |
-
-### Minimap
-
-| Key | Purpose |
-|-----|---------|
-| `minimap.background` | Minimap background |
-| `minimap.findMatchHighlight` | Search matches |
-| `minimap.errorHighlight` | Error indicators |
-| `minimap.warningHighlight` | Warning indicators |
-| `minimapSlider.background` | Viewport slider |
-| `minimapSlider.hoverBackground` | Slider on hover |
-| `minimapSlider.activeBackground` | Slider when dragging |
-| `minimapGutter.addedBackground` | Added lines |
-| `minimapGutter.modifiedBackground` | Modified lines |
-| `minimapGutter.deletedBackground` | Deleted lines |
-
-### Activity Bar Extras
-
-| Key | Purpose |
-|-----|---------|
-| `activityBar.inactiveForeground` | Inactive icons |
-| `activityBar.activeBorder` | Active indicator |
-| `activityBar.activeBackground` | Active item background |
-
-### Menu and Command Center
-
-| Key | Purpose |
-|-----|---------|
-| `menu.background` | Menu background |
-| `menu.foreground` | Menu text |
-| `menu.selectionBackground` | Selected menu item |
-| `menu.selectionForeground` | Selected item text |
-| `menu.separatorBackground` | Menu dividers |
-| `commandCenter.background` | Command center background |
-| `commandCenter.foreground` | Command center text |
-| `commandCenter.border` | Command center border |
-
-### List Extras
-
-| Key | Purpose |
-|-----|---------|
-| `list.focusForeground` | Focused item text |
-| `list.hoverForeground` | Hovered item text |
-| `list.errorForeground` | Items with errors |
-| `list.warningForeground` | Items with warnings |
-| `list.filterMatchBackground` | Filter match highlight |
-
-### Tab Extras
-
-| Key | Purpose |
-|-----|---------|
-| `tab.activeBorderTop` | Top border on active tab |
-| `tab.hoverBackground` | Tab on hover |
-| `tab.hoverForeground` | Tab text on hover |
-| `tab.unfocusedActiveBackground` | Active tab, unfocused group |
-| `tab.unfocusedActiveForeground` | Active tab text, unfocused |
-| `tab.unfocusedInactiveForeground` | Inactive tab, unfocused |
-
----
-
-## Lower Priority
-
-These are specialized features with good defaults.
-
-### Merge Conflicts
-
-- `merge.currentHeaderBackground`
-- `merge.currentContentBackground`
-- `merge.incomingHeaderBackground`
-- `merge.incomingContentBackground`
-- `merge.border`
-- `mergeEditor.change.background`
-
-### Debug
-
-- `debugToolBar.background`
-- `debugToolBar.border`
-- `editor.stackFrameHighlightBackground`
-- `editor.focusedStackFrameHighlightBackground`
-- `debugView.stateLabelBackground`
-- `debugView.stateLabelForeground`
-
-### Testing
-
-- `testing.iconPassed`
-- `testing.iconFailed`
-- `testing.iconErrored`
-- `testing.iconSkipped`
-- `testing.peekBorder`
-- `testing.peekHeaderBackground`
-
-### Editor Inlay Hints
-
-- `editorInlayHint.background`
-- `editorInlayHint.foreground`
-- `editorInlayHint.typeForeground`
-- `editorInlayHint.parameterForeground`
-
-### Sticky Scroll
-
-- `editorStickyScroll.background`
-- `editorStickyScroll.border`
-- `editorStickyScrollHover.background`
-
-### Bracket Pair Colorization
-
-- `editorBracketHighlight.foreground1` through `foreground6`
-- `editorBracketPairGuide.background1` through `background6`
-
-### Welcome Page
-
-- `welcomePage.background`
-- `welcomePage.tileBackground`
-- `welcomePage.tileHoverBackground`
-
-### Settings Editor
-
-- `settings.headerForeground`
-- `settings.modifiedItemIndicator`
-- `settings.focusedRowBackground`
+| Role | Color | Hex |
+|------|-------|-----|
+| Background | ![#1b1b1b](https://via.placeholder.com/12/1b1b1b/1b1b1b) | `#1b1b1b` |
+| Secondary BG | ![#151515](https://via.placeholder.com/12/151515/151515) | `#151515` |
+| Tertiary BG | ![#222222](https://via.placeholder.com/12/222222/222222) | `#222222` |
+| Foreground | ![#cbcccc](https://via.placeholder.com/12/cbcccc/cbcccc) | `#cbcccc` |
+| Muted | ![#706f70](https://via.placeholder.com/12/706f70/706f70) | `#706f70` |
+| Border | ![#333333](https://via.placeholder.com/12/333333/333333) | `#333333` |
+| Accent | ![#55bbe7](https://via.placeholder.com/12/55bbe7/55bbe7) | `#55bbe7` |
+| Selection | ![#29434e](https://via.placeholder.com/12/29434e/29434e) | `#29434e` |
+| Find Match | ![#fffd54](https://via.placeholder.com/12/fffd54/fffd54) | `#fffd54` |
+| Added | ![#6abf40](https://via.placeholder.com/12/6abf40/6abf40) | `#6abf40` |
+| Modified | ![#ec9112](https://via.placeholder.com/12/ec9112/ec9112) | `#ec9112` |
+| Deleted | ![#d32d2a](https://via.placeholder.com/12/d32d2a/d32d2a) | `#d32d2a` |
+| Error | ![#ef786c](https://via.placeholder.com/12/ef786c/ef786c) | `#ef786c` |
 
 ---
 
