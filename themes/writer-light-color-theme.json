@@ -150,17 +150,6 @@
     },
     {
       "scope": [
-        "markup.inline.raw",
-        "markup.fenced_code.block",
-        "markup.raw.block",
-        "meta.embedded.block"
-      ],
-      "settings": {
-        "background": "#edeeed"
-      }
-    },
-    {
-      "scope": [
         "comment",
         "punctuation.definition.heading",
         "punctuation.definition.image",
@@ -200,7 +189,6 @@
     {
       "scope": "invalid",
       "settings": {
-        "background": "#fce4e2",
         "foreground": "#ef786c"
       }
     },

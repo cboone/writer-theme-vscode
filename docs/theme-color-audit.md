@@ -12,7 +12,7 @@ Comparison of theme files against the [VSCode Theme Color Reference](https://cod
 | Invalid Keys | 0 |
 | High-Impact Missing | ~25 |
 | Medium-Impact Missing | ~30 |
-| Token Colors Defined | 13 rules (Markdown-focused) |
+| Token Colors Defined | 11 rules (Markdown-focused) |
 | Semantic Highlighting | Disabled |
 
 ---
@@ -40,7 +40,7 @@ Comparison against the [Semantic Highlight Guide](https://code.visualstudio.com/
 
 The themes have **no semantic token support** (`semanticHighlighting` and `semanticTokenColors` are absent). This appears intentional given the theme's purpose as "a minimal, monochromatic color scheme optimized for focused Markdown writing."
 
-### Token Colors Defined (13 rules)
+### Token Colors Defined (11 rules)
 
 **Markdown formatting:**
 
@@ -50,7 +50,6 @@ The themes have **no semantic token support** (`semanticHighlighting` and `seman
 | `markup.italic` | Italic |
 | `markup.bold` | Bold |
 | `markup.bold markup.italic` | Bold italic |
-| `markup.inline.raw`, `markup.fenced_code.block`, `markup.raw.block` | Background tint |
 | `markup.underline.link` | Underline, accent color |
 | `markup.inserted` | Green |
 | `markup.deleted` | Red |
@@ -63,7 +62,15 @@ The themes have **no semantic token support** (`semanticHighlighting` and `seman
 |-------|-------|
 | `comment`, punctuation definitions | Muted foreground |
 | `meta.image.inline.description`, `meta.link.inline.description` | Normal foreground |
-| `invalid` | Error background and foreground |
+| `invalid` | Error foreground |
+
+### Limitation: Token Background Colors
+
+VSCode does not support the `background` property in `tokenColors` (a TextMate feature that was never implemented). The following rules were removed as they only specified backgrounds:
+
+- `markup.inline.raw`, `markup.fenced_code.block`, `markup.raw.block`, `meta.embedded.block`
+
+The `invalid` scope was updated to use foreground-only styling.
 
 ### Missing Semantic Token Fallback Scopes
 
