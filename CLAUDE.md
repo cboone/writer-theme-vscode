@@ -1,0 +1,42 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+VSCode color theme extension converted from Sublime Text. A minimal, monochromatic color scheme optimized for focused Markdown writing, inspired by iA Writer. Includes light and dark variants.
+
+## Development
+
+This is a pure JSON theme extension with no build process or npm dependencies.
+
+### Testing the Theme
+
+Press `F5` in VSCode to launch Extension Development Host, then:
+
+1. Open Command Palette (`Cmd+K Cmd+T`)
+2. Select «Writer» or «Writer Dark»
+3. Open `specimen.md` to verify Markdown rendering
+
+### Key Files
+
+- `themes/writer-light-color-theme.json` - Light theme definition
+- `themes/writer-dark-color-theme.json` - Dark theme definition
+- `package.json` - Extension manifest
+- `specimen.md` - Markdown test file for theme verification
+
+### Source Files (Sublime Format)
+
+The original Sublime Text themes are preserved for reference:
+
+- `Writer.sublime-color-scheme` - Light theme source
+- `Writer Dark.sublime-color-scheme` - Dark theme source
+
+## Architecture
+
+VSCode theme files have two main sections:
+
+- `colors` - Workbench colors (editor, sidebar, tabs, statusbar)
+- `tokenColors` - Syntax highlighting rules with TextMate scopes
+
+The conversion plan with detailed color mappings is in `docs/plans/sublime-to-vscode-theme-conversion.md`.
