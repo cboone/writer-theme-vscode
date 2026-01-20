@@ -73,7 +73,7 @@ Made by [Niki Tonsky](https://twitter.com/nikitonsky).
 
 ## To do
 
-- Review colors
+- Take screenshots
 - Create icon
 - Finalize README
 - Publish to VSCode
