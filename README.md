@@ -73,7 +73,6 @@ Made by [Niki Tonsky](https://twitter.com/nikitonsky).
 
 ## To do
 
-- Take screenshots
 - Create icon
 - Finalize README
 - Publish to VSCode
