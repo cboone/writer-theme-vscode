@@ -1,17 +1,30 @@
 # Writer Color Theme for VSCode
 
-A color scheme for focused long-form writing, mimicking fantastic [iA Writer](https://ia.net/writer).
+A color theme for focused long-form writing, based on [Tonsky's Sublime Text theme](https://github.com/tonsky/sublime-scheme-writer), which was in turn inspired by [iA Writer](https://ia.net/writer).
 
 - Monochromatic color scheme for less distraction.
 - Optimized for Markdown.
 - Light and Dark versions.
-- Pairs well with [Writer font](https://github.com/tonsky/font-writer) at 16 px.
+- Pairs well with Tonsky's [Writer font](https://github.com/tonsky/font-writer) at 16 px.
 
-## Screenshots
+## Background
 
-<img src="screenshot.png" width="780px" alt="Writer theme screenshot">
-<img src="screenshot_light.png" width="780px" alt="Writer light theme screenshot">
-<img src="screenshot_dark.png" width="780px" alt="Writer dark theme screenshot">
+This theme is a port of [the Writer color theme](https://github.com/tonsky/sublime-scheme-writer) created by [Nikita Prokopov (aka Tonsky)](https://github.com/tonsky), from Sublime Text to VSCode.
+
+Tonsky created the original theme to replicate iA Writer's minimalist writing experience while gaining the broader capabilities of a full-featured text editor—multiple cursors. As he explains in his blog post ["Building an ultimate writing machine from Sublime Text"](https://tonsky.github.io/blog/sublime-writer/), iA Writer "found the perfect balance between features and simplicity, design and focus."
+
+## Screenshot
+
+![Writer Dark + Light themes combined screenshot](screenshots/writer-combined.png)
+
+## Color Palette
+
+| Role       | Light                                                              | Dark                                                               |
+| ---------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Background | ![#F7F7F7](https://placehold.co/16x16/F7F7F7/F7F7F7) `#F7F7F7` | ![#1b1b1b](https://placehold.co/16x16/1b1b1b/1b1b1b) `#1b1b1b` |
+| Foreground | ![#1a1a1a](https://placehold.co/16x16/1a1a1a/1a1a1a) `#1a1a1a` | ![#cbcccc](https://placehold.co/16x16/cbcccc/cbcccc) `#cbcccc` |
+| Accent     | ![#58bae7](https://placehold.co/16x16/58bae7/58bae7) `#58bae7` | ![#55bbe7](https://placehold.co/16x16/55bbe7/55bbe7) `#55bbe7` |
+| Selection  | ![#cee7f3](https://placehold.co/16x16/cee7f3/cee7f3) `#cee7f3` | ![#29434e](https://placehold.co/16x16/29434e/29434e) `#29434e` |
 
 ## Installation
 
@@ -24,17 +37,17 @@ Install from the VS Code Marketplace:
 Or install via Quick Open (`Cmd+P`):
 
 ```text
-ext install tonsky.writer-theme
+ext install cboone.writer-theme-vscode
 ```
 
 Then enable the theme:
 
 1. Open Command Palette (`Cmd+K Cmd+T`)
-2. Select "Writer" for light variant or "Writer Dark" for dark variant
+2. Select "Writer Light" or "Writer Dark"
 
 ## Recommended settings
 
-Add these to your `settings.json` for the best writing experience:
+To get Tonsky's full Writer experience, install [the Writer font](https://github.com/tonsky/font-writer), then add these to your `settings.json`:
 
 ```json
 {
@@ -59,13 +72,37 @@ Add these to your `settings.json` for the best writing experience:
 
 ## See also
 
-[Alabaster Color Scheme](https://github.com/tonsky/sublime-scheme-alabaster): minimal color scheme for coding.
+### [iA Writer](https://ia.net/writer)
 
-[Fira Code](https://github.com/tonsky/FiraCode/): Best coding font in the world.
+The app that inspired this theme's design philosophy. Hard to beat it.
+
+### [iA Fonts](https://github.com/iaolo/iA-Fonts)
+
+iA's modifications of IBM Plex Mono. These fonts are gorgeous. They're variable fonts, thus can be adjusted in every way possible. They're fully internationalized.
+
+iA Writer Mono is a cleaned up variant of Plex Mono. iA Writer Duo is the same, but with several characters (such as `W` and `M`) expanded to 150% of the rest. iA Writer Quattro is the same as Duo, but with some characters (such as `f` and `t`) shrunk to 75%, and some (such as `i` and `j`) shrunk to 50%. Which, in the end, makes for a proportional monospaced typeface.
+
+Read more about them in iA's blog post ["A Typographic Christmas"](https://ia.net/topics/a-typographic-christmas).
+
+### [Writer font](https://github.com/tonsky/font-writer)
+
+Tonsky's modified IBM Plex Mono, optimized for writing, "with increased letter-spacing and tuned weights."
+
+### [Alabaster color theme](https://github.com/tonsky/sublime-scheme-alabaster)
+
+Tonsky's minimal color scheme for coding, based on his philosophy of syntax highlighting, described in his blog post ["A case against syntax highlighting"](https://tonsky.me/blog/syntax-highlighting/).
+
+Available for [a very wide range of tools](https://github.com/cboone/alabaster-themes-for-terminals#related-themes), including [my versions for terminal emulators](https://github.com/cboone/alabaster-themes-for-terminals).
+
+### [Fira Code](https://github.com/tonsky/FiraCode/)
+
+Tonsky's beautiful update of [Fira Mono](https://github.com/mozilla/Fira) for coding, with monospaced ligatures. Pairs very well with Alabaster.
 
 ## Credits
 
-Made by [Niki Tonsky](https://twitter.com/nikitonsky).
+Original theme by [Nikita Prokopov (aka Tonsky)](https://github.com/tonsky/).
+
+VSCode port by [Christopher Boone](https://cboone.github.io).
 
 ## License
 
