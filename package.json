@@ -51,5 +51,10 @@
     "type": "git",
     "url": "https://github.com/cboone/writer-theme-vscode.git"
   },
+  "scripts": {
+    "package": "vsce package",
+    "publish:ovsx": "ovsx publish",
+    "publish:vscode": "vsce publish"
+  },
   "version": "1.0.0"
 }

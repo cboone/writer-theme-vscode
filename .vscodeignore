@@ -1,0 +1,16 @@
+.claude/
+.DS_Store
+.git/
+.github/
+.gitignore
+.pnp.cjs
+.pnp.loader.mjs
+.prettierignore
+.vscode/
+.yarn/
+*.vsix
+docs/
+markdown-samples/
+node_modules/
+screenshots/
+yarn.lock
