@@ -1,4 +1,4 @@
-# Writer Color Theme for VS Code
+# Writer Color Theme for VSCode
 
 A color scheme for focused long-form writing, mimicking fantastic [iA Writer](https://ia.net/writer).
 
@@ -69,11 +69,4 @@ Made by [Niki Tonsky](https://twitter.com/nikitonsky).
 
 ## License
 
-[MIT License](./LICENSE)
-
-## To do
-
-- Create icon
-- Finalize README
-- Publish to VSCode
-- Publish to VSCodium
+[MIT License](LICENSE)
