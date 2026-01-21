@@ -15,7 +15,7 @@ Tonsky created the original theme to replicate iA Writer's minimalist writing ex
 
 ## Screenshot
 
-![Writer Dark + Light themes combined screenshot](screenshots/writer-combined.png)
+![Writer Dark + Light themes combined screenshot](https://raw.githubusercontent.com/cboone/writer-theme-vscode/main/screenshots/writer-combined.png)
 
 ## Color Palette
 
