@@ -1,4 +1,4 @@
-# Theme Color Audit
+# Writer Theme Color Analysis
 
 Comparison of theme files against the [VSCode Theme Color Reference](https://code.visualstudio.com/api/references/theme-color).
 

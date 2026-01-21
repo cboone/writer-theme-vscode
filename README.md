@@ -1,4 +1,4 @@
-# Writer Color Theme for VSCode
+# <img src="icon.png" alt="Writer Color Theme icon" height="24px" /> Writer Color Theme for VSCode
 
 A color theme for focused long-form writing, based on [Tonsky's Sublime Text theme](https://github.com/tonsky/sublime-scheme-writer), which was in turn inspired by [iA Writer](https://ia.net/writer).
 
@@ -19,8 +19,8 @@ Tonsky created the original theme to replicate iA Writer's minimalist writing ex
 
 ## Color Palette
 
-| Role       | Light                                                              | Dark                                                               |
-| ---------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Role       | Light                                                          | Dark                                                           |
+| ---------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
 | Background | ![#F7F7F7](https://placehold.co/16x16/F7F7F7/F7F7F7) `#F7F7F7` | ![#1b1b1b](https://placehold.co/16x16/1b1b1b/1b1b1b) `#1b1b1b` |
 | Foreground | ![#1a1a1a](https://placehold.co/16x16/1a1a1a/1a1a1a) `#1a1a1a` | ![#cbcccc](https://placehold.co/16x16/cbcccc/cbcccc) `#cbcccc` |
 | Accent     | ![#58bae7](https://placehold.co/16x16/58bae7/58bae7) `#58bae7` | ![#55bbe7](https://placehold.co/16x16/55bbe7/55bbe7) `#55bbe7` |
