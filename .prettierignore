@@ -1,1 +1,2 @@
-samples/**/*.md
+# Markdown (formatted by markdownlint-cli2, not Prettier)
+*.md
